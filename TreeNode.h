@@ -21,6 +21,12 @@ public:
 		right = nullptr;
 	}
 
+	TreeNode(T in_letter, M in_morse) {
+		letter = in_letter;
+		morse = in_morse;
+	}
+
+
 	friend std::istream &operator >>(std::istream& input, TreeNode<T, M>& node) {
 		input >> node.letter;
 		input >> node.morse;

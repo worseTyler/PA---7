@@ -76,7 +76,7 @@ template <class T, class M>
 void BinaryTree<T, M>::display_in_order(TreeNode<T, M>* nodePtr) const {
 	if (nodePtr) {
 		display_in_order(nodePtr->left);
-		std::cout << nodePtr->letter << std::endl;
+		std::cout << nodePtr->letter << " " << nodePtr->morse << std::endl;
 		display_in_order(nodePtr->right);
 	}
 }
@@ -89,7 +89,7 @@ void BinaryTree<T, M>::display_pre_order() {
 template <class T, class M>
 void BinaryTree<T, M>::display_pre_order(TreeNode<T, M>* nodePtr) const {
 	if (nodePtr) {
-		std::cout << nodePtr->letter << std::endl;
+		std::cout << nodePtr->letter << " " << nodePtr->morse << std::endl;
 		display_pre_order(nodePtr->left);
 		display_pre_order(nodePtr->right);
 	}
@@ -105,7 +105,7 @@ void BinaryTree<T, M>::display_post_order(TreeNode<T, M>* nodePtr) const {
 	if (nodePtr) {
 		display_post_order(nodePtr->left);
 		display_post_order(nodePtr->right);
-		std::cout << nodePtr->letter << std::endl;
+		std::cout << nodePtr->letter << " " << nodePtr->morse << std::endl;
 	}
 }
 
